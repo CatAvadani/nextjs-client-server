@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import CountLabel from "./ui/CountLabel";
+import CountProvider from "./ui/CountProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,15 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <header className=' p-4 bg-slate-200'>
-          <nav className='flex justify-between text-xl'>
-            <Link href='/'>Home</Link>
-            <CountLabel />
-          </nav>
-        </header>
-        {children}
+        <CountProvider>
+          <header className=' p-4 bg-slate-200'>
+            <nav className='flex justify-between text-xl'>
+              <Link href='/'>Home</Link>
+              <CountLabel />
+            </nav>
+          </header>
+          {children}
+        </CountProvider>
       </body>
     </html>
   );
