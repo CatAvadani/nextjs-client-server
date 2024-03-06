@@ -1,8 +1,12 @@
+import CountButton from "./ui/CountButton";
+
 export default function Home() {
   return (
     <main className='flex flex-col'>
-      <h1 className=' p-4 text-lg'>Home Page</h1>
-      <button className='p-4 bg-slate-400 m-4'>Click Count: 0</button>
+      <h1 className=' p-4 text-lg font-bold'>Home Page</h1>
+      <CountButton />
+      <CountButton />
+
       <p className='p-4'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi.
         Distinctio aliquid deleniti quibusdam minima voluptas explicabo suscipit
